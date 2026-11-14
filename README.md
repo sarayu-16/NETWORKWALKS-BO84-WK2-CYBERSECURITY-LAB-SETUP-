@@ -9,19 +9,6 @@ Week 2 penetration testing report for the Networkwalks Cybersecurity internship 
 
 ---
 
-## Report Summary
-
-| Field | Detail |
-|---|---|
-| **Pentester Name** | Penagati Sarayu |
-| **Program / Batch** | B084 - Networkwalks |
-| **Date** | 14 November 2026 |
-| **Modules Completed** | W2-PM1 (Multiple Kali Tools), W2-PM5 (Zenmap Scanning) |
-| **Targets** | 1. networkwalks.com (written permission secured) <br> 2. My own local LAN (192.168.1.0/24) |
-| **Permission Secured** | Yes |
-| **Phases Covered** | Phase 1: Reconnaissance & Footprinting <br> Phase 2: Scanning & Network Discovery |
-
----
 
 ## 1. Liability Disclaimer
 
@@ -68,7 +55,7 @@ Target: `networkwalks.com` only.
 
 **Observation:** <!-- Write what YOUR output showed: registrar, creation/expiry dates, name servers, privacy protection -->
 
-![WHOIS output](screenshots/01-whois.png)
+![WHOIS output](screenshots/01-ping1.png)
 
 #### 4.1.2 WhatWeb
 
@@ -76,7 +63,7 @@ Target: `networkwalks.com` only.
 
 **Observation:** <!-- Write the web server, CMS, plugins and IP your output showed -->
 
-![WhatWeb output](screenshots/02-whatweb.png)
+![ WhatWeb output](screenshots/02-ping2.png)
 
 #### 4.1.3 Nslookup
 
@@ -84,7 +71,6 @@ Target: `networkwalks.com` only.
 
 **Observation:** <!-- Write the IP address your output showed -->
 
-![Nslookup output](screenshots/03-nslookup.png)
 
 #### 4.1.4 Curl (HTTP headers)
 
@@ -92,7 +78,6 @@ Target: `networkwalks.com` only.
 
 **Observation:** <!-- Write the server header, redirects and any exposed endpoints -->
 
-![Curl output](screenshots/04-curl.png)
 
 #### 4.1.5 Wafw00f
 
@@ -100,7 +85,7 @@ Target: `networkwalks.com` only.
 
 **Observation:** <!-- Write whether a WAF was detected and which one -->
 
-![Wafw00f output](screenshots/05-wafw00f.png)
+![Wafw00f output](screenshots/05-ping5.png)
 
 #### 4.1.6 DNSRecon
 
@@ -108,7 +93,7 @@ Target: `networkwalks.com` only.
 
 **Observation:** <!-- Write the name servers, mail servers and TXT/SPF records found -->
 
-![DNSRecon output](screenshots/06-dnsrecon.png)
+![DNSRecon output](screenshots/06-ping6.png)
 
 ---
 
@@ -128,8 +113,9 @@ Target: my own local network only.
 | Subnet scanned | 192.168.1.0/24 |
 | My MAC address | <!-- from ipconfig /all, Physical Address --> |
 
-![ipconfig output](screenshots/07-ipconfig.png)
+![ipconfig output](screenshots/s2rt1.png)
 
+![ipconfig output](screenshots/s2rt2.png)
 #### 4.2.2 Ping scan (host discovery)
 
 **Zenmap profile:** Ping scan  
@@ -148,34 +134,16 @@ Target: my own local network only.
 | 192.168.1.4 | <!-- my MAC --> | My own PC |
 | <!-- add any other hosts Zenmap found --> | | |
 
-![ARP table](screenshots/09-arp-table.png)
-
 #### 4.2.4 Network topology
 
 I opened the Topology tab in Zenmap, enabled the legend and saved the graphic as PDF.
 
-![Network topology](screenshots/10-zenmap-topology.png)
+![Network topology](screenshots/10-netwa.png)
 
-[Download topology PDF](screenshots/topology.pdf)
-
----
-
-## 5. Risk Analysis / Impact
-
-> These are observations from information gathering and host discovery, not confirmed vulnerabilities. No exploitation or vulnerability validation was performed.
-
-| # | Finding | Evidence | Potential Impact | Risk Level |
-|---|---|---|---|---|
-| 1 | <!-- e.g. web technology exposed --> | <!-- tool and result --> | <!-- impact --> | <!-- Low / Medium --> |
-| 2 | <!-- e.g. server IP identifiable --> | | | |
-| 3 | <!-- e.g. HTTP headers expose information --> | | | |
-| 4 | <!-- e.g. WAF identifiable --> | | | |
-| 5 | <!-- e.g. DNS records exposed --> | | | |
-| 6 | Additional device on the local network | `arp -a` and Zenmap show 192.168.1.2 | An unknown device could be unauthorised if not verified | Low |
 
 ---
 
-## 6. Recommendations
+## 5. Recommendations
 
 1. **Review publicly exposed technology information:** check what the website reveals about its CMS, plugins and server.
 2. **Keep software updated:** patch the CMS, plugins and server regularly.
@@ -189,52 +157,6 @@ I opened the Topology tab in Zenmap, enabled the legend and saved the graphic as
 
 ---
 
-## 7. Conclusion
-
-<!-- Write 2 to 3 short paragraphs in your own words: what you did in footprinting, what you did in scanning, what you learned, and why authorization and scope matter. -->
-
----
-
-## 8. Evidence Index
-
-| # | File | Description |
-|---|---|---|
-| 1 | `screenshots/01-whois.png` | WHOIS output |
-| 2 | `screenshots/02-whatweb.png` | WhatWeb output |
-| 3 | `screenshots/03-nslookup.png` | Nslookup output |
-| 4 | `screenshots/04-curl.png` | Curl header output |
-| 5 | `screenshots/05-wafw00f.png` | Wafw00f output |
-| 6 | `screenshots/06-dnsrecon.png` | DNSRecon output |
-| 7 | `screenshots/07-ipconfig.png` | ipconfig output |
-| 8 | `screenshots/08-zenmap-ping-scan.png` | Zenmap ping scan |
-| 9 | `screenshots/09-arp-table.png` | `arp -a` output |
-| 10 | `screenshots/10-zenmap-topology.png` | Zenmap topology |
-| 11 | `screenshots/topology.pdf` | Topology saved as PDF |
-| 12 | `Letter-of-Authorization.pdf` | Written permission for testing |
-
----
-
-## Repository Structure
-
-```
-NETWORKWALKS-B084-WK2-CYBERSECURITY-LAB-SETUP/
-├── README.md
-├── Letter-of-Authorization.pdf
-└── screenshots/
-    ├── 01-whois.png
-    ├── 02-whatweb.png
-    ├── 03-nslookup.png
-    ├── 04-curl.png
-    ├── 05-wafw00f.png
-    ├── 06-dnsrecon.png
-    ├── 07-ipconfig.png
-    ├── 08-zenmap-ping-scan.png
-    ├── 09-arp-table.png
-    ├── 10-zenmap-topology.png
-    └── topology.pdf
-```
-
----
 
 ## Author
 
