@@ -134,7 +134,9 @@ Target: my own local network only.
 
 **Observation:** <!-- Write how many hosts were up, e.g. "Nmap done: 256 IP addresses (X hosts up)" -->
 
-![Zenmap ping scan](screenshots/08-zenmap-ping-scan.png)
+<p align="center">
+  <img src="HJK6.png" width="700" alt="Zenmap">
+</p>
 
 #### 4.2.3 Hosts identified
 
