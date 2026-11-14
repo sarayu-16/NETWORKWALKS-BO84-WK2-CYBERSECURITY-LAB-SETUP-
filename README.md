@@ -55,7 +55,9 @@ Target: `networkwalks.com` only.
 
 **Observation:** <!-- Write what YOUR output showed: registrar, creation/expiry dates, name servers, privacy protection -->
 
-![WHOIS output](screenshots/01-ping1.png)
+<p align="center">
+  <img src="ping1.png" width="700" alt="WHOIS Lookup">
+</p>
 
 #### 4.1.2 WhatWeb
 
@@ -63,7 +65,9 @@ Target: `networkwalks.com` only.
 
 **Observation:** <!-- Write the web server, CMS, plugins and IP your output showed -->
 
-![ WhatWeb output](screenshots/02-ping2.png)
+<p align="center">
+  <img src="ping2.png" width="700" alt="WHOIS Lookup">
+</p>
 
 #### 4.1.3 Nslookup
 
@@ -78,6 +82,7 @@ Target: `networkwalks.com` only.
 
 **Observation:** <!-- Write the server header, redirects and any exposed endpoints -->
 
+ 
 
 #### 4.1.5 Wafw00f
 
@@ -85,7 +90,9 @@ Target: `networkwalks.com` only.
 
 **Observation:** <!-- Write whether a WAF was detected and which one -->
 
-![Wafw00f output](screenshots/05-ping5.png)
+<p align="center">
+  <img src="ping5.png" width="700" alt=" Wafw00f">
+</p>
 
 #### 4.1.6 DNSRecon
 
@@ -93,8 +100,9 @@ Target: `networkwalks.com` only.
 
 **Observation:** <!-- Write the name servers, mail servers and TXT/SPF records found -->
 
-![DNSRecon output](screenshots/06-ping6.png)
-
+<p align="center">
+  <img src="ping6.png" width="700" alt=" DNSRecon">
+</p>
 ---
 
 ### 4.2 Network Scanning with Zenmap (W2-PM5)
@@ -113,9 +121,12 @@ Target: my own local network only.
 | Subnet scanned | 192.168.1.0/24 |
 | My MAC address | <!-- from ipconfig /all, Physical Address --> |
 
-![ipconfig output](screenshots/s2rt1.png)
-
-![ipconfig output](screenshots/s2rt2.png)
+<p align="center">
+  <img src="s2rt1.png" width="700" alt=" ipconfig">
+</p>
+<p align="center">
+  <img src="s2rt2.png" width="700" alt=" ipconfig">
+</p>
 #### 4.2.2 Ping scan (host discovery)
 
 **Zenmap profile:** Ping scan  
@@ -138,8 +149,10 @@ Target: my own local network only.
 
 I opened the Topology tab in Zenmap, enabled the legend and saved the graphic as PDF.
 
-![Network topology](screenshots/10-netwa.png)
 
+<p align="center">
+  <img src="netwa.png" width="700" alt=" network">
+</p>
 
 ---
 
